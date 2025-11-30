@@ -1,0 +1,14 @@
+C:\GitHub\personal\C-Programmin-Path\CsharpProjects\Link-s-Ocarina-of-Time-turn-based-battle\bin\Debug\net9.0\Link-s-Ocarina-of-Time-turn-based-battle.exe
+C:\GitHub\personal\C-Programmin-Path\CsharpProjects\Link-s-Ocarina-of-Time-turn-based-battle\bin\Debug\net9.0\Link-s-Ocarina-of-Time-turn-based-battle.deps.json
+C:\GitHub\personal\C-Programmin-Path\CsharpProjects\Link-s-Ocarina-of-Time-turn-based-battle\bin\Debug\net9.0\Link-s-Ocarina-of-Time-turn-based-battle.runtimeconfig.json
+C:\GitHub\personal\C-Programmin-Path\CsharpProjects\Link-s-Ocarina-of-Time-turn-based-battle\bin\Debug\net9.0\Link-s-Ocarina-of-Time-turn-based-battle.dll
+C:\GitHub\personal\C-Programmin-Path\CsharpProjects\Link-s-Ocarina-of-Time-turn-based-battle\bin\Debug\net9.0\Link-s-Ocarina-of-Time-turn-based-battle.pdb
+C:\GitHub\personal\C-Programmin-Path\CsharpProjects\Link-s-Ocarina-of-Time-turn-based-battle\obj\Debug\net9.0\Link-s-Ocarina-of-Time-turn-based-battle.GeneratedMSBuildEditorConfig.editorconfig
+C:\GitHub\personal\C-Programmin-Path\CsharpProjects\Link-s-Ocarina-of-Time-turn-based-battle\obj\Debug\net9.0\Link-s-Ocarina-of-Time-turn-based-battle.AssemblyInfoInputs.cache
+C:\GitHub\personal\C-Programmin-Path\CsharpProjects\Link-s-Ocarina-of-Time-turn-based-battle\obj\Debug\net9.0\Link-s-Ocarina-of-Time-turn-based-battle.AssemblyInfo.cs
+C:\GitHub\personal\C-Programmin-Path\CsharpProjects\Link-s-Ocarina-of-Time-turn-based-battle\obj\Debug\net9.0\Link-s-Ocarina-of-Time-turn-based-battle.csproj.CoreCompileInputs.cache
+C:\GitHub\personal\C-Programmin-Path\CsharpProjects\Link-s-Ocarina-of-Time-turn-based-battle\obj\Debug\net9.0\Link-s-Ocarina-of-Time-turn-based-battle.dll
+C:\GitHub\personal\C-Programmin-Path\CsharpProjects\Link-s-Ocarina-of-Time-turn-based-battle\obj\Debug\net9.0\refint\Link-s-Ocarina-of-Time-turn-based-battle.dll
+C:\GitHub\personal\C-Programmin-Path\CsharpProjects\Link-s-Ocarina-of-Time-turn-based-battle\obj\Debug\net9.0\Link-s-Ocarina-of-Time-turn-based-battle.pdb
+C:\GitHub\personal\C-Programmin-Path\CsharpProjects\Link-s-Ocarina-of-Time-turn-based-battle\obj\Debug\net9.0\Link-s-Ocarina-of-Time-turn-based-battle.genruntimeconfig.cache
+C:\GitHub\personal\C-Programmin-Path\CsharpProjects\Link-s-Ocarina-of-Time-turn-based-battle\obj\Debug\net9.0\ref\Link-s-Ocarina-of-Time-turn-based-battle.dll

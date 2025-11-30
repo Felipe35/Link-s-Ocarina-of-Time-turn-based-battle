@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "Link-s-Ocarina-of-Time-turn-based-battle/1.0.0": {
+        "runtime": {
+          "Link-s-Ocarina-of-Time-turn-based-battle.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Link-s-Ocarina-of-Time-turn-based-battle/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
