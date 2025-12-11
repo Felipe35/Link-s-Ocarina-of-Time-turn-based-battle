@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Link-s-Ocarina-of-Time-turn-based-battle")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+52e817a589c39f8f1d7b55af4700c6a7f3f9e948")]
 [assembly: System.Reflection.AssemblyProductAttribute("Link-s-Ocarina-of-Time-turn-based-battle")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Link-s-Ocarina-of-Time-turn-based-battle")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

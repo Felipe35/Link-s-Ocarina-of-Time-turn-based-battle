@@ -47,7 +47,7 @@ public class LinkWorld
         if (!isQueenDefetead)
         {
             Console.WriteLine("=== Game Over ===");
-            
+
         }
         Console.WriteLine("=== Moving to next boss: King Dodongo! ===");
         // reset Link for king fight
@@ -59,7 +59,7 @@ public class LinkWorld
             Console.WriteLine("=== Game Over ===");
         }
 
-        
+
         Console.WriteLine("==== End of Story for now! ====");
     }
 
@@ -366,18 +366,18 @@ public class LinkWorld
         line = string.Format("Armor Percentage: {0:F2}", enemy[2] * 100);
         Console.WriteLine("| {0,-38}|", line);
 
-        if(enemy[2] < 1.0)
+        if (enemy[2] < 1.0)
         {
             line = "Part of his amor is been destroyed!!";
-        Console.WriteLine("| {0,-38}|", line);
+            Console.WriteLine("| {0,-38}|", line);
         }
         else
         {
-        line = "His armor is like a rock!";
-        Console.WriteLine("| {0,-38}|", line);    
+            line = "His armor is like a rock!";
+            Console.WriteLine("| {0,-38}|", line);
         }
-        
-        
+
+
 
         Console.WriteLine(border);
     }
@@ -385,7 +385,8 @@ public class LinkWorld
     // -------- COMBATS --------
 
     public static bool queenCombat(double[] link, double[] queen, string[] bag, string[] queenLoot)
-    {   Console.WriteLine("=== THE MATCH BEGAN! ===");
+    {
+        Console.WriteLine("=== THE MATCH BEGAN! ===");
         Console.WriteLine("!!!!==== Queen Gohman Boss====!!!!");
 
         while (link[0] > 0 && queen[0] > 0)
@@ -401,40 +402,48 @@ public class LinkWorld
             Console.Write("Enter option: ");
             string input = Console.ReadLine();
 
-            switch (input)
-            {
-                case "1":
-                    linkAttackQueen(link, queen);
-                    queenGohmaAttack(link, queen);
-                    Console.WriteLine("\tYou attacked Queen boss with: " + link[3] + " damage!");
-                    Console.WriteLine("\tQueen attacked you with: " + queen[1] + " damage!");
-                    break;
-                case "2":
-                    linkIncreaseBlockChance(link);
-                    queenGohmaAttack(link, queen);
-                    Console.WriteLine("\tYou increase block value by: " +
-                                      string.Format("{0:F2}%", link[2] * 100) +
-                                      " current block value");
-                    Console.WriteLine("\tQueen attacked you with: " + queen[1] + " damage!");
-                    break;
-                case "3":
-                    linkEnchantWeaponWithEnergy(link);
-                    queenGohmaAttackChargedByRage(link, queen);
-                    Console.WriteLine("\tYou enchant your weapon and your damage increase by!: " +
-                                      link[3] + " and your energy decrease by: " + link[1]);
-                    Console.WriteLine("\tOh! Queen now is getting mad!, she increase damage by: " + queen[1] + " damage!");
-                    break;
-                case "4":
-                    linkUseHealthPotion(link, bag);
-                    queenGohmaAttack(link, queen);
-                    Console.WriteLine("\tYour health now is restored! and you have no items left");
-                    Console.WriteLine("\tQueen attacks you with: " + queen[1] + " damage");
-                    break;
-                case "5":
-                    linkStatus(link, bag);
-                    queenGohmaStatus(queen);
-                    break;
+            try
+            {   int choice = int.Parse(input);
+                switch (choice)
+                {
+                    case 1:
+                        linkAttackQueen(link, queen);
+                        queenGohmaAttack(link, queen);
+                        Console.WriteLine("\tYou attacked Queen boss with: " + link[3] + " damage!");
+                        Console.WriteLine("\tQueen attacked you with: " + queen[1] + " damage!");
+                        break;
+                    case 2:
+                        linkIncreaseBlockChance(link);
+                        queenGohmaAttack(link, queen);
+                        Console.WriteLine("\tYou increase block value by: " +
+                                          string.Format("{0:F2}%", link[2] * 100) +
+                                          " current block value");
+                        Console.WriteLine("\tQueen attacked you with: " + queen[1] + " damage!");
+                        break;
+                    case 3:
+                        linkEnchantWeaponWithEnergy(link);
+                        queenGohmaAttackChargedByRage(link, queen);
+                        Console.WriteLine("\tYou enchant your weapon and your damage increase by!: " +
+                                          link[3] + " and your energy decrease by: " + link[1]);
+                        Console.WriteLine("\tOh! Queen now is getting mad!, she increase damage by: " + queen[1] + " damage!");
+                        break;
+                    case 4:
+                        linkUseHealthPotion(link, bag);
+                        queenGohmaAttack(link, queen);
+                        Console.WriteLine("\tYour health now is restored! and you have no items left");
+                        Console.WriteLine("\tQueen attacks you with: " + queen[1] + " damage");
+                        break;
+                    case 5:
+                        linkStatus(link, bag);
+                        queenGohmaStatus(queen);
+                        break;
+                }
             }
+            catch (FormatException)
+            {
+                 Console.WriteLine($"Error: '{input}' no es un número válido.");
+            }
+
         }
 
         if (link[0] <= 0 && queen[0] <= 0)
@@ -460,7 +469,8 @@ public class LinkWorld
     }
 
     public static bool kingCombat(double[] link, double[] king, string[] bag, string[] kingLoot)
-    {   Console.WriteLine("=== THE MATCH BEGAN! ===");
+    {
+        Console.WriteLine("=== THE MATCH BEGAN! ===");
         Console.WriteLine("!!!!==== King Dodongo Boss ====!!!!");
 
         while (link[0] > 0 && king[0] > 0)
@@ -476,55 +486,65 @@ public class LinkWorld
 
             Console.Write("Enter option: ");
             string input = Console.ReadLine();
-
-            switch (input)
+            try
             {
-                case "1":
-                    linkAttackKing(link, king);
-                    kingDodongoAttack(link, king);
-                    Console.WriteLine("\tYou attacked King boss with: " + link[3] + " damage!");
-                    if(king[2] < 1.0)
-                    {
-                        Console.WriteLine("\tKing now is vulnerable to physical damage!");
-                    }
-                    else
-                    {
-                        Console.WriteLine("\tBut has not effect to King boss, and you received damage of: " + king[1]);    
-                    }
-                    
-                    break;
-                case "2":
-                    linkIncreaseBlockChance(link);
-                    kingDodongoAttack(link, king);
-                    Console.WriteLine("\tYou increase block value by: " +
-                                      string.Format("{0:F2}%", link[2] * 100) +
-                                      " current block value");
-                    Console.WriteLine("\tKing attacks you with: " + king[1] + " damage!");
-                    break;
-                case "3":
-                    linkEnchantWeaponWithEnergy(link);
-                    kingDodongoAttack(link, king);
-                    Console.WriteLine("\tYou enchant your weapon and your damage increase by!: " +
-                                      link[3] + " and your energy decrease by: " + link[1]);
-                    Console.WriteLine("\tKing attacks you with: " + king[1] + " damage!");
-                    break;
-                case "4":
-                    linkUseHealthPotion(link, bag);
-                    kingDodongoAttack(link, king);
-                    Console.WriteLine("\tYour health now is restored! and you have no items left");
-                    Console.WriteLine("\tKing attacks you with: " + king[1] + " damage!");
-                    break;
-                case "5":
-                    linkUseFireBombOnKing(link, bag, king);
-                    Console.WriteLine("\tThat's is super effective against King!");
-                    Console.WriteLine("\tNow King's armor is been reduce by: " +
-                                      string.Format("{0:F2}", king[2] * 100));
-                    break;
-                case "6":
-                    linkStatus(link, bag);
-                    kingDoDongoStatus(king);
-                    break;
+                int choice = int.Parse(input);
+                switch (choice)
+                {
+                    case 1:
+                        linkAttackKing(link, king);
+                        kingDodongoAttack(link, king);
+                        Console.WriteLine("\tYou attacked King boss with: " + link[3] + " damage!");
+                        if (king[2] < 1.0)
+                        {
+                            Console.WriteLine("\tKing now is vulnerable to physical damage!");
+                        }
+                        else
+                        {
+                            Console.WriteLine("\tBut has not effect to King boss, and you received damage of: " + king[1]);
+                        }
+
+                        break;
+                    case 2:
+                        linkIncreaseBlockChance(link);
+                        kingDodongoAttack(link, king);
+                        Console.WriteLine("\tYou increase block value by: " +
+                                          string.Format("{0:F2}%", link[2] * 100) +
+                                          " current block value");
+                        Console.WriteLine("\tKing attacks you with: " + king[1] + " damage!");
+                        break;
+                    case 3:
+                        linkEnchantWeaponWithEnergy(link);
+                        kingDodongoAttack(link, king);
+                        Console.WriteLine("\tYou enchant your weapon and your damage increase by!: " +
+                                          link[3] + " and your energy decrease by: " + link[1]);
+                        Console.WriteLine("\tKing attacks you with: " + king[1] + " damage!");
+                        break;
+                    case 4:
+                        linkUseHealthPotion(link, bag);
+                        kingDodongoAttack(link, king);
+                        Console.WriteLine("\tYour health now is restored! and you have no items left");
+                        Console.WriteLine("\tKing attacks you with: " + king[1] + " damage!");
+                        break;
+                    case 5:
+                        linkUseFireBombOnKing(link, bag, king);
+                        Console.WriteLine("\tThat's is super effective against King!");
+                        Console.WriteLine("\tNow King's armor is been reduce by: " +
+                                          string.Format("{0:F2}", king[2] * 100));
+                        break;
+                    case 6:
+                        linkStatus(link, bag);
+                        kingDoDongoStatus(king);
+                        break;
+                }
             }
+            catch (FormatException)
+            {
+                Console.WriteLine($"Error: '{input}' no es un número válido.");
+            }
+
+
+
         }
 
         if (link[0] <= 0 && king[0] <= 0)
@@ -545,4 +565,5 @@ public class LinkWorld
 
         return false;
     }
+
 }
